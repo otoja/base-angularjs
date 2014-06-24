@@ -3,8 +3,17 @@
 /* Filters */
 
 angular.module('myApp.filters', []).
-  filter('interpolate', ['version', function(version) {
-    return function(text) {
-      return String(text).replace(/\%VERSION\%/mg, version);
-    };
-  }]);
+        filter('capitalize', function() {
+            return function(txt) {
+                if (txt !== null)
+                    txt = txt.toLowerCase();
+                return txt.substring(0, 1).toUpperCase() + txt.substring(1);
+            };
+        }).
+        filter('ssn', function() {
+            return function(txt) {
+                if (txt !== null)
+                    var tmp=txt.split('-');
+                return '***-**-' + tmp[2];
+            };
+        });

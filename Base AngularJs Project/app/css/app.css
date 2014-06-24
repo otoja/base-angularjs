@@ -1,30 +1,178 @@
-/* app css stylesheet */
-
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+body{
+    font-size: 10pt;  
+    color: #4d4d4d;
+}
+.search-bar{
+    /* width: 780px; */
+    padding: 10px;
+    height: auto;
+    border: 1px solid cornflowerblue;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #4B8498;
+    margin: -1px;
+}
+.search-bar-text{
+    display: inline-block;
+    height: 40px;
+    background-color: #599BB5;
+}
+.search-bar input[type=text]{
+    background-color:transparent;
+    border: 0px solid;
+    color: whitesmoke;
+    height: 40px;
+    width:400px;
+}
+.search-bar i{
+    background-image: url('../img/glyphicons_027_search.png');
+}
+.search-bar-text *:focus{
+    outline: none;
+}
+.dropdown{
+    display: inline;
+    width: 100px;
 }
 
-.menu:before {
-  content: "[";
+.dropdown-toggle{
+    -webkit-appearance: button;
+    height: 40px;
+    border: 1px solid transparent;
+    color: white;
+    font-size: inherit;
+    margin: 0;
+    overflow: hidden;
+    /*    padding: 5px;*/
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background-color: #599BB5;
+    margin-top: -3px;
+    width: 100px;
+}
+.dropdown-menu{
+    background-color: rgb(70,81,101); 
+    width: 100px;
+}
+.dropdown-menu  li, a{
+    background-color: rgb(80, 91, 111);
+    margin-bottom: 2px;
+    padding: 3px;
+    color: white !important; 
+}
+.dropdown-menu  li a:hover{
+    background-color: rgb(159,185,198);
+}
+.btn{
+    border-radius: 0px;
+}
+.btn-default{
+    background-color: rgb(124, 203, 233) !important;
+   
+}
+.btn-default:focus, .btn-default:hover{
+    background-color: #599BB5;
+}
+.btn-all{
+    -webkit-appearance: button;
+    background-color: rgb(59,102,119);
+    height: 40px;
+    margin-top: -3px;
+    margin-left: 10px;
+    font: inherit;
+    color: rgb(89,155,181);
+}
+.btn-pagination{
+    height: 100%;
+    background-color: #d4d4d4;
+    width: 50px !important;
+    height: 50px;
+    border-radius: 0;
+    margin-left: -4px;
+    text-align: center;
+    color: gray;
+    font-weight: bold;
+}
+.btn-pagination:focus, .btn-pagination:active{
+    background-color: #599BB5 !important;
+    outline: none;
+    color: white;
+}
+.icon-white{
+    color: white;
+}
+/*Search bar header background : #4B8498
+Search bar background : #599BB5
+Grid header : #599BB5
+Row background : #FBFBFB
+Alternate background : #FFFFFF
+
+Pagination. color : #599BB5*/
+
+
+
+//nggrid style ovverides
+.ngVerticalBarVisible {
+    background-color: transparent;
+    width: 0px;
+}
+.ngHeaderContainer {
+    position: relative;
+    overflow: hidden;
+    background-color: #599BB5;
+    color: white;
+}
+.ngRow {
+    position: absolute;
+    color: grey;
+    border-bottom:none !important;
+}
+.ngRow.odd {
+    background-color: #FBFBFB;
+}
+.ngRow.even {
+    background-color: #FFFFFF;
+}
+.ngFooterPanel{
+    background-color: #FBFBFB;
+    border-bottom: 1px #d4d4d4 solid;
+}
+.ngPagerControl{
+    float: right;
+}
+.ngLabel{
+    padding-right: 10px;
+    color: gray;
+}
+.ngCellText, .ngHeaderCell{
+    display:table-cell;
+    vertical-align:middle !important;
+    white-space:normal;
+    padding: 10px;
+}
+.ngHeaderCell{
+    font-size: 11pt;
+    font-weight: normal;
+}
+.ngViewport{
+    height:auto !important;
+}
+.ngCanvas, .ngViewport, .ngRow, .ngFooterPanel, .ngTopPanel   {
+   width: 100% !important;
 }
 
-.menu:after {
-  content: "]";
-}
 
-.menu > li {
-  display: inline;
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #fff;
 }
-
-.menu > li:before {
-  content: "|";
-  padding-right: 0.3em;
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #fff;
+    opacity:  1;
 }
-
-.menu > li:nth-child(1):before {
-  content: "";
-  padding: 0;
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #fff;
+    opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #fff;
 }

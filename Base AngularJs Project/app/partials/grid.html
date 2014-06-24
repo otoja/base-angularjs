@@ -1,0 +1,22 @@
+<div class="search-bar">
+    <div class="search-bar-text">
+        <i class=" icon-large icon-white"></i>
+        <input type="text" ng-model="filterOptions.filterText" placeholder="Search by name/SSN/DOB&hellip;">
+        <div class="btn-group">
+            <button ng-model="filterOptions.filterColumn" id="search" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" >
+                 Name <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+                <li><a onclick="dropdownSelect('Name')">Name</a></li>
+                <li><a onclick="dropdownSelect('DOB')">DOB</a></li>
+                <li><a onclick="dropdownSelect('ID')">ID</a></li>
+                <li><a onclick="dropdownSelect('SSN')">SSN</a></li>
+                <li><a onclick="dropdownSelect('Phone')">Phone</a></li>
+                <li><a onclick="dropdownSelect('Zipcode')">Zipcode</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <input type="button" class="btn btn-all btn-lg" value="Show all" ng-click="clearFilters()"/>
+</div>
+<div class="gridStyle" ng-grid="gridOptions"></div>
